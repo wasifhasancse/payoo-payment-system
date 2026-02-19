@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payoo | Sign in</title>
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  
   <!-- fontawesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- daisyui@5 and tailwindcss@4 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/Logo.png" type="image/x-icon">
+  <title>Payoo | Sign in</title>
 </head>
 
 <body>
@@ -31,7 +34,7 @@
             <div class="space-y-2.5">
               <label class="label text-neutral text-[16px] font-bold">Mobile Number</label>
               <input id="mobile-number" maxlength="11" minlength="11" required type="tel" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
-                placeholder="Enter Your Number" />
+                placeholder="Enter Your Number" value="01234567890"/>
             </div>
             <div class="space-y-2.5">
               <label class="label text-neutral text-[16px] font-bold">4 Digit Pin</label>
