@@ -9,10 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- fontawesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmR9I1+IuLW5IT+brZEZsLFm++aCMlF1V92rMk+3S+N0Tt+ZlJ2V/8YB8w=="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
   <!-- daisyui@5 and tailwindcss@4 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -31,23 +30,41 @@
           <fieldset class="fieldset space-y-5">
             <div class="space-y-2.5">
               <label class="label text-neutral text-[16px] font-bold">Mobile Number</label>
-              <input type="tel" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              <input id="mobile-number" maxlength="11" minlength="11" required type="tel" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
                 placeholder="Enter Your Number" />
             </div>
             <div class="space-y-2.5">
               <label class="label text-neutral text-[16px] font-bold">4 Digit Pin</label>
-              <input type="password" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              <input id="pin" type="password" maxlength="4" minlength="4" required class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
                 placeholder="Enter 4 Digit Pin" />
             </div>
             <div class="space-y-2.5">
               <a class="link link-hover">Forgot password?</a>
-              <a href="" class="btn btn-primary rounded-full w-full mt-4 text-lg">Login</a>
+              <button id="login-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Login</button>
+            </div>
+            
+
+            <div>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box w-full max-w-sm mx-auto">
+                  <h3 class="text-yellow-300 text-5xl text-center"><i class="fa-solid fa-triangle-exclamation"></i></h3>
+                  <p class="py-4 text-[16px]">Press ESC key or click the button below to close</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </fieldset>
         </div>
       </div>
     </div>
   </section>
+  <script src="./js/machine.js"></script>
+  <script src="./js/login.js"></script>
 </body>
 
 </html>
