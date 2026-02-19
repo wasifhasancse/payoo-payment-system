@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- fontawesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmR9I1+IuLW5IT+brZEZsLFm++aCMlF1V92rMk+3S+N0Tt+ZlJ2V/8YB8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmR9I1+IuLW5IT+brZEZsLFm++aCMlF1V92rMk+3S+N0Tt+ZlJ2V/8YB8w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <!-- daisyui@5 and tailwindcss@4 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-  
+  <section class="min-h-screen max-w-md mx-auto bg-base-200">
+    <div class="min-h-screen flex flex-col items-center justify-center">
+      <div class="w-[264px] h-auto mx-auto">
+        <img src="./assets/Logo-full.png" alt="Payoo Logo">
+      </div>
+      
+      <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto mt-10 rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset space-y-5">
+            <div class="space-y-2.5">
+              <label class="label text-neutral text-[16px] font-bold">Mobile Number</label>
+              <input type="tel" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+                placeholder="Enter Your Number" />
+            </div>
+            <div class="space-y-2.5">
+              <label class="label text-neutral text-[16px] font-bold">4 Digit Pin</label>
+              <input type="password" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+                placeholder="Enter 4 Digit Pin" />
+            </div>
+            <div class="space-y-2.5">
+              <a class="link link-hover">Forgot password?</a>
+              <a href="" class="btn btn-primary rounded-full w-full mt-4 text-lg">Login</a>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
