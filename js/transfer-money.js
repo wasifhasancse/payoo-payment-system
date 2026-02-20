@@ -11,8 +11,13 @@ document.getElementById("transfer-btn").addEventListener("click", function () {
     }, 3000);
     return;
   }
-  if (transferAmount === "" || isNaN(transferAmount) || transferAmount <= 0 || transferAmount > currentBalance) {
-    const modal = modalOpen("Please enter a valid amount.");  
+  if (
+    transferAmount === "" ||
+    isNaN(transferAmount) ||
+    parseFloat(transferAmount) <= 0 ||
+    parseFloat(transferAmount) > currentBalance
+  ) {
+    const modal = modalOpen("Please enter a valid amount.");
     setTimeout(() => {
       modal.close();
     }, 3000);

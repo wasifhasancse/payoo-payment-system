@@ -191,7 +191,7 @@
         <fieldset class="fieldset space-y-5">
           <!-- input section start -->
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Select A Bank</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="bank-select">Select A Bank</label>
             <select id="bank-select" class="select rounded-full bg-base-200 border-none w-full px-5">
               <option disabled selected>Select Bank</option>
               <option>DBBL</option>
@@ -201,14 +201,14 @@
           </div>
 
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Bank Account Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="bank-account-number">Bank Account Number</label>
             <input id="bank-account-number" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Enter 11 digit account number" value="01234567890" />
           </div>
 
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Amount to Add</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="add-money-amount">Amount to Add</label>
             <input id="add-money-amount" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Add amount to withdraw" />
@@ -216,7 +216,7 @@
           <!-- input section end -->
           <!-- pin input section start -->
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Pin Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="add-money-pin">Pin Number</label>
             <input id="add-money-pin" type="password" maxlength="4" minlength="4" required
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
           </div>
@@ -243,21 +243,21 @@
           <!-- input section start -->
   
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Agent Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="agent-account-number">Agent Number</label>
             <input id="agent-account-number" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Enter 11 digit account number" value="01234567890" />
           </div>
   
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Amount to Cashout</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="cashout-amount">Amount to Cashout</label>
             <input id="cashout-amount" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter amount to cashout" />
           </div>
           <!-- input section end -->
           <!-- pin input section start -->
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Pin Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="cashout-pin">Pin Number</label>
             <input id="cashout-pin" type="password" maxlength="4" minlength="4" required
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
           </div>
@@ -284,21 +284,21 @@
           <!-- input section start -->
   
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Account Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="transfer-account-number">Account Number</label>
             <input id="transfer-account-number" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Enter 11 digit account number" value="01234567890" />
           </div>
   
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Amount to Transfer</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="transfer-amount">Amount to Transfer</label>
             <input id="transfer-amount" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter amount to transfer" />
           </div>
           <!-- input section end -->
           <!-- pin input section start -->
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold">Pin Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="transfer-pin">Pin Number</label>
             <input id="transfer-pin" type="password" maxlength="4" minlength="4" required
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
           </div>
@@ -314,7 +314,7 @@
 <!-- Transfer Money section end -->
 
 <!-- Get Bonus section start -->
-<section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+<section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
   <div class="flex items-center justify-between">
     <h2 class="text-xl font-bold">Get Bonus</h2>
   </div>
@@ -325,10 +325,10 @@
         <!-- input section start -->
 
         <div class="space-y-2.5">
-          <label class="label text-neutral text-[16px] font-semibold">Bonus Coupon</label>
+          <label class="label text-neutral text-[16px] font-semibold" for="bonus-coupon-code">Bonus Coupon</label>
           <input id="bonus-coupon-code" maxlength="6" minlength="6" required type="text"
             class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
-            placeholder="Enter 6 digit bonus coupon" value="012345" />
+            placeholder="Enter 6 digit bonus coupon"/>
         </div>
         <!-- input section end -->
         <div class="space-y-2.5">
@@ -341,11 +341,62 @@
 </section>
 <!-- Get Bonus section end -->
 
+<!-- Pay Bill form section start -->
+<section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-bold">Pay Bill</h2>
+  </div>
+  <!-- form section start -->
+  <div class="card bg-base-100 w-full mt-5 rounded-2xl">
+    <div class="card-body">
+      <fieldset class="fieldset space-y-5">
+        <!-- input section start -->
+        <div class="space-y-2.5">
+          <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-select">Select To Pay</label>
+          <select id="pay-bill-select" class="select rounded-full bg-base-200 border-none w-full px-5">
+            <option disabled selected>Select to pay</option>
+            <option>DBBL</option>
+            <option>IBBL</option>
+            <option>BBL</option>
+          </select>
+        </div>
+
+        <div class="space-y-2.5">
+          <label class="label text-neutral text-[16px] font-semibold" for="biller-account-number">Biller Account Number</label>
+          <input id="biller-account-number" maxlength="11" minlength="11" required type="text"
+            class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+            placeholder="Enter 11 digit account number" value="01234567890" />
+        </div>
+
+        <div class="space-y-2.5">
+          <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-amount">Amount to Pay</label>
+          <input id="pay-bill-amount" maxlength="11" minlength="11" required type="tel"
+            class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Add amount to pay" />
+        </div>
+        <!-- input section end -->
+        <!-- pin input section start -->
+        <div class="space-y-2.5">
+          <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-pin">Pin Number</label>
+          <input id="pay-bill-pin" type="password" maxlength="4" minlength="4" required
+            class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
+        </div>
+        <!-- pin input section end -->
+        <div class="space-y-2.5">
+          <button id="pay-bill-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Pay Now</button>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <!-- form section end -->
+</section>
+<!-- Pay Bill form section end -->
+
   <script src="./js/machine.js"></script>
   <script src="./js/add-money.js"></script>
   <script src="./js/cashout.js"></script>
   <script src="./js/transfer-money.js"></script>
   <script src="./js/get-bonus.js"></script>
+  <script src="./js/pay-bill.js"></script>
 </body>
 
 </html>
