@@ -5,7 +5,7 @@ document.getElementById("pay-bill-btn").addEventListener("click", function () {
   const payBillPin = document.getElementById("pay-bill-pin").value;
   const currentBalance = getBalance();
   
-  if (payBillSelect === "Select to pay") {
+  if (payBillSelect === "Select biller to pay") {
     const modal = modalOpen("Please select a biller to pay.");
     setTimeout(() => {
       modal.close();
@@ -34,7 +34,7 @@ document.getElementById("pay-bill-btn").addEventListener("click", function () {
     );  
     setTimeout(() => {
       modal.close();
-      document.getElementById("pay-bill-select").value = "Select to pay";
+      document.getElementById("pay-bill-select").value = "Select biller to pay";
       document.getElementById("biller-account-number").value = "";
       document.getElementById("pay-bill-amount").value = "";
       document.getElementById("pay-bill-pin").value = "";

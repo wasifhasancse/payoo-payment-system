@@ -64,12 +64,13 @@
   </section>
   <!-- All button section end -->
 
+  <!-- modal section start -->
   <section>
     <!-- Modal section start -->
     <div>
       <dialog id="my_modal_1" class="modal">
         <div class="modal-box w-full max-w-sm mx-auto">
-          <h3 class="text-yellow-300 text-5xl text-center"><i class="fa-solid fa-triangle-exclamation"></i></h3>
+          <h3 class="text-primary text-5xl text-center"><i class="fa-solid fa-triangle-exclamation"></i></h3>
           <p class="py-4 text-[16px]">Press ESC key or click the button below to close</p>
           <div class="modal-action">
             <form method="dialog">
@@ -82,21 +83,22 @@
     </div>
     <!-- Modal section end -->
   </section>
+<!-- modal section end -->
 
   <!-- Recent Transactions section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
+  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
     <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold">Recent Transactions</h2>
+      <h2 class="text-xl font-bold">Transaction History</h2>
       <a href="#" class="text-gray-600">View all</a>
     </div>
     <div class="pt-5 space-y-4">
 
-      <!-- Recent Transactions card start   -->
+      <!-- Recent Transactions card start -->
       <div class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
         <div class="flex items-center gap-2.5">
           <div class="p-2.5 bg-base-300 rounded-full"><img src="./assets/opt-1.png" alt="Add Money"></div>
           <div class="text-left">
-            <h3 class="text-lg font-bold">Add Money</h3>
+            <h3 class="text-lg font-semibold">Add Money</h3>
             <p class="text-gray-600">+ $100.00</p>
           </div>
         </div>
@@ -107,75 +109,8 @@
           <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         </div>
       </div>
-      <!-- Recent Transactions card end   -->
-      <!-- Recent Transactions card start   -->
-      <div class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <div class="p-2.5 bg-base-300 rounded-full"><img src="./assets/opt-1.png" alt="Add Money"></div>
-          <div class="text-left">
-            <h3 class="text-lg font-bold">Add Money</h3>
-            <p class="text-gray-600">+ $100.00</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2.5">
-          <div class="text-right">
-            <p class="text-gray-600">Today <span>01:44 AM</span></p>
-          </div>
-          <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-        </div>
-      </div>
-      <!-- Recent Transactions card end   -->
-      <!-- Recent Transactions card start   -->
-      <div class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <div class="p-2.5 bg-base-300 rounded-full"><img src="./assets/opt-1.png" alt="Add Money"></div>
-          <div class="text-left">
-            <h3 class="text-lg font-bold">Add Money</h3>
-            <p class="text-gray-600">+ $100.00</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2.5">
-          <div class="text-right">
-            <p class="text-gray-600">Today <span>01:44 AM</span></p>
-          </div>
-          <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-        </div>
-      </div>
-      <!-- Recent Transactions card end   -->
-      <!-- Recent Transactions card start   -->
-      <div class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <div class="p-2.5 bg-base-300 rounded-full"><img src="./assets/opt-1.png" alt="Add Money"></div>
-          <div class="text-left">
-            <h3 class="text-lg font-bold">Add Money</h3>
-            <p class="text-gray-600">+ $100.00</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2.5">
-          <div class="text-right">
-            <p class="text-gray-600">Today <span>01:44 AM</span></p>
-          </div>
-          <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-        </div>
-      </div>
-      <!-- Recent Transactions card end   -->
-      <!-- Recent Transactions card start   -->
-      <div class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <div class="p-2.5 bg-base-300 rounded-full"><img src="./assets/opt-1.png" alt="Add Money"></div>
-          <div class="text-left">
-            <h3 class="text-lg font-bold">Add Money</h3>
-            <p class="text-gray-600">+ $100.00</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2.5">
-          <div class="text-right">
-            <p class="text-gray-600">Today <span>01:44 AM</span></p>
-          </div>
-          <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-        </div>
-      </div>
-      <!-- Recent Transactions card end   -->
+      <!-- Recent Transactions card end -->
+    </div>
 
   </section>
   <!-- Recent Transactions section end -->
@@ -201,7 +136,8 @@
           </div>
 
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold" for="bank-account-number">Bank Account Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="bank-account-number">Bank Account
+              Number</label>
             <input id="bank-account-number" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Enter 11 digit account number" value="01234567890" />
@@ -241,18 +177,19 @@
       <div class="card-body">
         <fieldset class="fieldset space-y-5">
           <!-- input section start -->
-  
+
           <div class="space-y-2.5">
             <label class="label text-neutral text-[16px] font-semibold" for="agent-account-number">Agent Number</label>
             <input id="agent-account-number" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Enter 11 digit account number" value="01234567890" />
           </div>
-  
+
           <div class="space-y-2.5">
             <label class="label text-neutral text-[16px] font-semibold" for="cashout-amount">Amount to Cashout</label>
             <input id="cashout-amount" maxlength="11" minlength="11" required type="tel"
-              class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter amount to cashout" />
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              placeholder="Enter amount to cashout" />
           </div>
           <!-- input section end -->
           <!-- pin input section start -->
@@ -272,7 +209,7 @@
   </section>
   <!-- Cashout form section end -->
 
-<!-- Transfer Money section start -->
+  <!-- Transfer Money section start -->
   <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Transfer Money</h2>
@@ -282,18 +219,20 @@
       <div class="card-body">
         <fieldset class="fieldset space-y-5">
           <!-- input section start -->
-  
+
           <div class="space-y-2.5">
-            <label class="label text-neutral text-[16px] font-semibold" for="transfer-account-number">Account Number</label>
+            <label class="label text-neutral text-[16px] font-semibold" for="transfer-account-number">Account
+              Number</label>
             <input id="transfer-account-number" maxlength="11" minlength="11" required type="tel"
               class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
               placeholder="Enter 11 digit account number" value="01234567890" />
           </div>
-  
+
           <div class="space-y-2.5">
             <label class="label text-neutral text-[16px] font-semibold" for="transfer-amount">Amount to Transfer</label>
             <input id="transfer-amount" maxlength="11" minlength="11" required type="tel"
-              class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter amount to transfer" />
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              placeholder="Enter amount to transfer" />
           </div>
           <!-- input section end -->
           <!-- pin input section start -->
@@ -311,85 +250,86 @@
     </div>
     <!-- form section end -->
   </section>
-<!-- Transfer Money section end -->
+  <!-- Transfer Money section end -->
 
-<!-- Get Bonus section start -->
-<section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
-  <div class="flex items-center justify-between">
-    <h2 class="text-xl font-bold">Get Bonus</h2>
-  </div>
-  <!-- form section start -->
-  <div class="card bg-base-100 w-full mt-5 rounded-2xl">
-    <div class="card-body">
-      <fieldset class="fieldset space-y-5">
-        <!-- input section start -->
-
-        <div class="space-y-2.5">
-          <label class="label text-neutral text-[16px] font-semibold" for="bonus-coupon-code">Bonus Coupon</label>
-          <input id="bonus-coupon-code" maxlength="6" minlength="6" required type="text"
-            class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
-            placeholder="Enter 6 digit bonus coupon"/>
-        </div>
-        <!-- input section end -->
-        <div class="space-y-2.5">
-          <button id="bonus-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Get Bonus</button>
-        </div>
-      </fieldset>
+  <!-- Get Bonus section start -->
+  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl font-bold">Get Bonus</h2>
     </div>
-  </div>
-  <!-- form section end -->
-</section>
-<!-- Get Bonus section end -->
+    <!-- form section start -->
+    <div class="card bg-base-100 w-full mt-5 rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset space-y-5">
+          <!-- input section start -->
 
-<!-- Pay Bill form section start -->
-<section class="max-w-md mx-auto bg-base-200 px-5 py-5">
-  <div class="flex items-center justify-between">
-    <h2 class="text-xl font-bold">Pay Bill</h2>
-  </div>
-  <!-- form section start -->
-  <div class="card bg-base-100 w-full mt-5 rounded-2xl">
-    <div class="card-body">
-      <fieldset class="fieldset space-y-5">
-        <!-- input section start -->
-        <div class="space-y-2.5">
-          <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-select">Select To Pay</label>
-          <select id="pay-bill-select" class="select rounded-full bg-base-200 border-none w-full px-5">
-            <option disabled selected>Select to pay</option>
-            <option>DBBL</option>
-            <option>IBBL</option>
-            <option>BBL</option>
-          </select>
-        </div>
-
-        <div class="space-y-2.5">
-          <label class="label text-neutral text-[16px] font-semibold" for="biller-account-number">Biller Account Number</label>
-          <input id="biller-account-number" maxlength="11" minlength="11" required type="text"
-            class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
-            placeholder="Enter 11 digit account number" value="01234567890" />
-        </div>
-
-        <div class="space-y-2.5">
-          <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-amount">Amount to Pay</label>
-          <input id="pay-bill-amount" maxlength="11" minlength="11" required type="tel"
-            class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Add amount to pay" />
-        </div>
-        <!-- input section end -->
-        <!-- pin input section start -->
-        <div class="space-y-2.5">
-          <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-pin">Pin Number</label>
-          <input id="pay-bill-pin" type="password" maxlength="4" minlength="4" required
-            class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
-        </div>
-        <!-- pin input section end -->
-        <div class="space-y-2.5">
-          <button id="pay-bill-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Pay Now</button>
-        </div>
-      </fieldset>
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold" for="bonus-coupon-code">Bonus Coupon</label>
+            <input id="bonus-coupon-code" maxlength="6" minlength="6" required type="text"
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              placeholder="Enter 6 digit bonus coupon" />
+          </div>
+          <!-- input section end -->
+          <div class="space-y-2.5">
+            <button id="bonus-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Get Bonus</button>
+          </div>
+        </fieldset>
+      </div>
     </div>
-  </div>
-  <!-- form section end -->
-</section>
-<!-- Pay Bill form section end -->
+    <!-- form section end -->
+  </section>
+  <!-- Get Bonus section end -->
+
+  <!-- Pay Bill form section start -->
+  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl font-bold">Pay Bill</h2>
+    </div>
+    <!-- form section start -->
+    <div class="card bg-base-100 w-full mt-5 rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset space-y-5">
+          <!-- input section start -->
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-select">Select To Pay</label>
+            <select id="pay-bill-select" class="select rounded-full bg-base-200 border-none w-full px-5">
+              <option disabled selected>Select biller to pay</option>
+              <option>DBBL</option>
+              <option>IBBL</option>
+              <option>BBL</option>
+            </select>
+          </div>
+
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold" for="biller-account-number">Biller Account
+              Number</label>
+            <input id="biller-account-number" maxlength="11" minlength="11" required type="text"
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              placeholder="Enter 11 digit account number" value="01234567890" />
+          </div>
+
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-amount">Amount to Pay</label>
+            <input id="pay-bill-amount" maxlength="11" minlength="11" required type="tel"
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Add amount to pay" />
+          </div>
+          <!-- input section end -->
+          <!-- pin input section start -->
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold" for="pay-bill-pin">Pin Number</label>
+            <input id="pay-bill-pin" type="password" maxlength="4" minlength="4" required
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
+          </div>
+          <!-- pin input section end -->
+          <div class="space-y-2.5">
+            <button id="pay-bill-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Pay Now</button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <!-- form section end -->
+  </section>
+  <!-- Pay Bill form section end -->
 
   <script src="./js/machine.js"></script>
   <script src="./js/add-money.js"></script>
@@ -397,6 +337,7 @@
   <script src="./js/transfer-money.js"></script>
   <script src="./js/get-bonus.js"></script>
   <script src="./js/pay-bill.js"></script>
+  <script src="./js/transaction-history.js"></script>
 </body>
 
 </html>

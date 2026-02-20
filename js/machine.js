@@ -19,3 +19,7 @@ function getBalance() {
 function setBalance(newBalance) {
   document.getElementById("balance").textContent = newBalance.toFixed(2);
 }
+
+function addTransactionHistory(type, amount) {
+  
+}

@@ -43,6 +43,8 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
       document.getElementById("add-money-amount").value = "";
       document.getElementById("add-money-pin").value = "";
     }, 3000);
+
+    addTransactionHistory("Add Money", addMoneyAmount);
     }
   else {
     const modal = modalOpen("Invalid PIN. Please enter your PIN.");
