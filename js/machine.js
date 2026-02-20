@@ -12,10 +12,10 @@ function getInputValue(id) {
   return document.getElementById(id).value;
 }
 
-function getBlance() {
+function getBalance() {
   return parseFloat(document.getElementById("balance").textContent);
 }
 
-function setBlance(newBalance) {
+function setBalance(newBalance) {
   document.getElementById("balance").textContent = newBalance.toFixed(2);
 }

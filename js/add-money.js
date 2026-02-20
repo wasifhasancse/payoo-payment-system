@@ -3,6 +3,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   const bankAccountNumber = document.getElementById("bank-account-number").value;
   const addMoneyAmount = document.getElementById("add-money-amount").value;
   const addMoneyPin = document.getElementById("add-money-pin").value;
+  const currentBalance = getBalance();
   
   if (bankSelect === "Select Bank") {
     const modal = modalOpen("Please select a bank.");
@@ -29,9 +30,8 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   }
   
   if (addMoneyPin === userPin) {
-    const currentBalance = getBlance();
     const newBalance = currentBalance + parseFloat(addMoneyAmount);
-    setBlance(newBalance);
+    setBalance(newBalance);
 
     const modal = modalOpen(
       `Successfully added ${addMoneyAmount} BDT to your account.`,

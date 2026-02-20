@@ -273,7 +273,7 @@
   <!-- Cashout form section end -->
 
 <!-- Transfer Money section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Transfer Money</h2>
     </div>
@@ -313,10 +313,39 @@
   </section>
 <!-- Transfer Money section end -->
 
+<!-- Get Bonus section start -->
+<section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-bold">Get Bonus</h2>
+  </div>
+  <!-- form section start -->
+  <div class="card bg-base-100 w-full mt-5 rounded-2xl">
+    <div class="card-body">
+      <fieldset class="fieldset space-y-5">
+        <!-- input section start -->
+
+        <div class="space-y-2.5">
+          <label class="label text-neutral text-[16px] font-semibold">Bonus Coupon</label>
+          <input id="bonus-coupon-code" maxlength="6" minlength="6" required type="text"
+            class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+            placeholder="Enter 6 digit bonus coupon" value="012345" />
+        </div>
+        <!-- input section end -->
+        <div class="space-y-2.5">
+          <button id="bonus-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Get Bonus</button>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <!-- form section end -->
+</section>
+<!-- Get Bonus section end -->
+
   <script src="./js/machine.js"></script>
   <script src="./js/add-money.js"></script>
   <script src="./js/cashout.js"></script>
   <script src="./js/transfer-money.js"></script>
+  <script src="./js/get-bonus.js"></script>
 </body>
 
 </html>

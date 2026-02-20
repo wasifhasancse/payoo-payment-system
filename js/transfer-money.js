@@ -2,7 +2,7 @@ document.getElementById("transfer-btn").addEventListener("click", function () {
   const transferAccountNumber = document.getElementById("transfer-account-number").value;
   const transferAmount = Number(document.getElementById("transfer-amount").value);
   const transferPin = document.getElementById("transfer-pin").value;
-  const currentBalance = getBlance();
+  const currentBalance = getBalance();
 
   if (transferAccountNumber === "" || transferAccountNumber.length !== 11) {
     const modal = modalOpen("Please enter a valid 11-digit account number.");
@@ -20,7 +20,7 @@ document.getElementById("transfer-btn").addEventListener("click", function () {
   }
   if (transferPin === userPin) {
     const newBalance = currentBalance - transferAmount;
-    setBlance(newBalance);
+    setBalance(newBalance);
     const modal = modalOpen(
       `Successfully transferred ${transferAmount} BDT to account number ${transferAccountNumber}.`,
     );  

@@ -2,6 +2,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const agentAccountNumber = document.getElementById("agent-account-number").value;
   const amount = Number(document.getElementById("cashout-amount").value);
   const cashoutPin = document.getElementById("cashout-pin").value;
+  const currentBalance = getBalance();
   
   if (agentAccountNumber === "" || agentAccountNumber.length !== 11) {
     const modal = modalOpen("Please enter a valid 11-digit agent account number.");
@@ -10,7 +11,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     }, 3000);
     return;
   }
-  if (amount === "" || isNaN(amount) || amount <= 0) {
+  if (amount === "" || isNaN(amount) || amount <= 0 || amount > currentBalance) {
     const modal = modalOpen("Please enter a valid amount.");
     setTimeout(() => {
       modal.close();
@@ -18,9 +19,8 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     return;
   }
   if (cashoutPin === userPin) {
-    const currentBalance = getBlance();
     const newBalance = currentBalance - parseFloat(amount);
-    setBlance(newBalance);
+    setBalance(newBalance);
 
     const modal = modalOpen(
       `Successfully cashed out ${amount} BDT from your account.
