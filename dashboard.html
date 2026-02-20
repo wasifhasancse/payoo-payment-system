@@ -232,7 +232,7 @@
   <!-- Add money form section end -->
 
   <!-- Cashout form section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Cashout</h2>
     </div>
@@ -272,9 +272,51 @@
   </section>
   <!-- Cashout form section end -->
 
+<!-- Transfer Money section start -->
+  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl font-bold">Transfer Money</h2>
+    </div>
+    <!-- form section start -->
+    <div class="card bg-base-100 w-full mt-5 rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset space-y-5">
+          <!-- input section start -->
+  
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold">Account Number</label>
+            <input id="transfer-account-number" maxlength="11" minlength="11" required type="tel"
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
+              placeholder="Enter 11 digit account number" value="01234567890" />
+          </div>
+  
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold">Amount to Transfer</label>
+            <input id="transfer-amount" maxlength="11" minlength="11" required type="tel"
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter amount to transfer" />
+          </div>
+          <!-- input section end -->
+          <!-- pin input section start -->
+          <div class="space-y-2.5">
+            <label class="label text-neutral text-[16px] font-semibold">Pin Number</label>
+            <input id="transfer-pin" type="password" maxlength="4" minlength="4" required
+              class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 digit Pin" />
+          </div>
+          <!-- pin input section end -->
+          <div class="space-y-2.5">
+            <button id="transfer-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Send Money</button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <!-- form section end -->
+  </section>
+<!-- Transfer Money section end -->
+
   <script src="./js/machine.js"></script>
   <script src="./js/add-money.js"></script>
   <script src="./js/cashout.js"></script>
+  <script src="./js/transfer-money.js"></script>
 </body>
 
 </html>
