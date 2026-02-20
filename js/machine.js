@@ -1,3 +1,6 @@
+const userNumber = "01234567890";
+const userPin = "1234";
+
 function modalOpen(showInfo) {
   const modal = document.getElementById("my_modal_1");
   modal.querySelector(".modal-box p").textContent = showInfo;
