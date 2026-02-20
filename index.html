@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- fontawesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- daisyui@5 and tailwindcss@4 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -24,29 +24,36 @@
 <body>
   <section class="min-h-screen max-w-md mx-auto bg-base-200">
     <div class="min-h-screen flex flex-col items-center justify-center">
+      <!-- logo section  -->
       <div class="w-[264px] h-auto mx-auto">
         <img src="./assets/Logo-full.png" alt="Payoo Logo">
       </div>
-      
+
+      <!-- form section start -->
       <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto mt-10 rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset space-y-5">
+            <!-- mobile number input section start -->
             <div class="space-y-2.5">
               <label class="label text-neutral text-[16px] font-bold">Mobile Number</label>
-              <input id="mobile-number" maxlength="11" minlength="11" required type="tel" class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
-                placeholder="Enter Your Number" value="01234567890"/>
+              <input id="mobile-number" maxlength="11" minlength="11" required type="tel"
+                class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter Your Number"
+                value="01234567890" />
             </div>
+            <!-- mobile number input section end -->
+            <!-- pin input section start -->
             <div class="space-y-2.5">
               <label class="label text-neutral text-[16px] font-bold">4 Digit Pin</label>
-              <input id="pin" type="password" maxlength="4" minlength="4" required class="input rounded-full bg-base-200 border-none w-full px-5 py-4"
-                placeholder="Enter 4 Digit Pin" />
+              <input id="pin" type="password" maxlength="4" minlength="4" required
+                class="input rounded-full bg-base-200 border-none w-full px-5 py-4" placeholder="Enter 4 Digit Pin" />
             </div>
+            <!-- pin input section end -->
             <div class="space-y-2.5">
               <a class="link link-hover">Forgot password?</a>
               <button id="login-btn" class="btn btn-primary rounded-full w-full mt-4 text-lg">Login</button>
             </div>
-            
 
+            <!-- Modal section start -->
             <div>
               <dialog id="my_modal_1" class="modal">
                 <div class="modal-box w-full max-w-sm mx-auto">
@@ -61,9 +68,11 @@
                 </div>
               </dialog>
             </div>
+            <!-- Modal section end -->
           </fieldset>
         </div>
       </div>
+      <!-- form section end -->
     </div>
   </section>
   <script src="./js/machine.js"></script>
