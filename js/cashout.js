@@ -30,7 +30,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   if (cashoutPin === userPin) {
     const newBalance = currentBalance - parseFloat(cashOutAmount);
     setBalance(newBalance);
-
+    addTransactionHistory("Cash Out", "-", cashOutAmount);
     const modal = modalOpen(
       `Successfully cashed out ${cashOutAmount} BDT from your account.
       Agent Account Number: ${agentAccountNumber}`,

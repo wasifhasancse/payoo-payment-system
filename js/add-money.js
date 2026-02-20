@@ -1,10 +1,12 @@
 document.getElementById("add-money-btn").addEventListener("click", function () {
   const bankSelect = document.getElementById("bank-select").value;
-  const bankAccountNumber = document.getElementById("bank-account-number").value;
+  const bankAccountNumber = document.getElementById(
+    "bank-account-number",
+  ).value;
   const addMoneyAmount = document.getElementById("add-money-amount").value;
   const addMoneyPin = document.getElementById("add-money-pin").value;
   const currentBalance = getBalance();
-  
+
   if (bankSelect === "Select Bank") {
     const modal = modalOpen("Please select a bank.");
     setTimeout(() => {
@@ -12,7 +14,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     }, 3000);
     return;
   }
-  
+
   if (bankAccountNumber === "" || bankAccountNumber.length !== 11) {
     const modal = modalOpen("Please enter a valid 11-digit account number.");
     setTimeout(() => {
@@ -20,19 +22,23 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     }, 3000);
     return;
   }
-  
-  if (addMoneyAmount === "" || isNaN(addMoneyAmount) || parseFloat(addMoneyAmount) <= 0) {
+
+  if (
+    addMoneyAmount === "" ||
+    isNaN(addMoneyAmount) ||
+    parseFloat(addMoneyAmount) <= 0
+  ) {
     const modal = modalOpen("Please enter a valid amount.");
     setTimeout(() => {
       modal.close();
     }, 3000);
     return;
   }
-  
+
   if (addMoneyPin === userPin) {
     const newBalance = currentBalance + parseFloat(addMoneyAmount);
     setBalance(newBalance);
-
+    addTransactionHistory("Add Money", "+", addMoneyAmount);
     const modal = modalOpen(
       `Successfully added ${addMoneyAmount} BDT to your account.`,
     );
@@ -43,10 +49,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
       document.getElementById("add-money-amount").value = "";
       document.getElementById("add-money-pin").value = "";
     }, 3000);
-
-    addTransactionHistory("Add Money", addMoneyAmount);
-    }
-  else {
+  } else {
     const modal = modalOpen("Invalid PIN. Please enter your PIN.");
     setTimeout(() => {
       modal.close();

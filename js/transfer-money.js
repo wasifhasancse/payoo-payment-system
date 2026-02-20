@@ -1,6 +1,10 @@
-document.getElementById("transfer-btn").addEventListener("click", function () { 
-  const transferAccountNumber = document.getElementById("transfer-account-number").value;
-  const transferAmount = Number(document.getElementById("transfer-amount").value);
+document.getElementById("transfer-btn").addEventListener("click", function () {
+  const transferAccountNumber = document.getElementById(
+    "transfer-account-number",
+  ).value;
+  const transferAmount = Number(
+    document.getElementById("transfer-amount").value,
+  );
   const transferPin = document.getElementById("transfer-pin").value;
   const currentBalance = getBalance();
 
@@ -26,9 +30,10 @@ document.getElementById("transfer-btn").addEventListener("click", function () {
   if (transferPin === userPin) {
     const newBalance = currentBalance - transferAmount;
     setBalance(newBalance);
+    addTransactionHistory("Transfer Money", "-", transferAmount);
     const modal = modalOpen(
       `Successfully transferred ${transferAmount} BDT to account number ${transferAccountNumber}.`,
-    );  
+    );
     setTimeout(() => {
       modal.close();
       document.getElementById("transfer-account-number").value = "";

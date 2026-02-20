@@ -49,17 +49,17 @@
 
   <!-- All button section start -->
   <section class="max-w-md mx-auto bg-base-200 px-5 grid grid-cols-3 gap-4 py-5">
-    <button class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-1.png"
+    <button onclick="showCase('add-money')" class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-1.png"
         alt="Add Money">Add Money</button>
-    <button class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-2.png"
+    <button onclick="showCase('cashout')" class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-2.png"
         alt="Cashout">Cashout</button>
-    <button class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-3.png"
+    <button onclick="showCase('transfer-money')" class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-3.png"
         alt="Transfer">Transfer Money</button>
-    <button class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-4.png"
+    <button onclick="showCase('get-bonus')" class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-4.png"
         alt="Get Bonus">Get Bonus</button>
-    <button class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-5.png"
+    <button onclick="showCase('pay-bill')" class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-5.png"
         alt="Pay Bill">Pay Bill</button>
-    <button class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-6.png"
+    <button onclick="showCase('transaction-history')" class="btn btn-outline border-gray-300 rounded-lg flex-col h-full p-5 "><img src="./assets/opt-6.png"
         alt="Transaction">Transaction</button>
   </section>
   <!-- All button section end -->
@@ -86,25 +86,26 @@
 <!-- modal section end -->
 
   <!-- Recent Transactions section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+  <section id="transaction-history" class="max-w-md mx-auto bg-base-200 px-5 py-5">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Transaction History</h2>
       <a href="#" class="text-gray-600">View all</a>
     </div>
-    <div class="pt-5 space-y-4">
+    <div id="transaction-container" class="pt-5 space-y-4">
 
       <!-- Recent Transactions card start -->
-      <div class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
+      <div id="transaction-card" class="bg-base-100 border border-gray-300 rounded-lg h-full w-full p-2.5 flex items-center justify-between">
         <div class="flex items-center gap-2.5">
           <div class="p-2.5 bg-base-300 rounded-full"><img src="./assets/opt-1.png" alt="Add Money"></div>
           <div class="text-left">
-            <h3 class="text-lg font-semibold">Add Money</h3>
-            <p class="text-gray-600">+ $100.00</p>
+            <h3 id="transaction-card-title" class="text-lg font-semibold">Add Money</h3>
+            <p id="transaction-card-time" class="text-gray-600">Feb 20, 2026, 10:38 AM</p>
+            
           </div>
         </div>
         <div class="flex items-center gap-2.5">
           <div class="text-right">
-            <p class="text-gray-600">Today <span>01:44 AM</span></p>
+            <p id="transaction-card-amount" class="text-gray-600">+ $100.00</p>
           </div>
           <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         </div>
@@ -116,7 +117,7 @@
   <!-- Recent Transactions section end -->
 
   <!-- Add money form section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
+  <section id="add-money" class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Add Money</h2>
     </div>
@@ -168,7 +169,7 @@
   <!-- Add money form section end -->
 
   <!-- Cashout form section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
+  <section id="cashout" class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Cashout</h2>
     </div>
@@ -210,7 +211,7 @@
   <!-- Cashout form section end -->
 
   <!-- Transfer Money section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
+  <section id="transfer-money" class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Transfer Money</h2>
     </div>
@@ -253,7 +254,7 @@
   <!-- Transfer Money section end -->
 
   <!-- Get Bonus section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
+  <section id="get-bonus" class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Get Bonus</h2>
     </div>
@@ -281,7 +282,7 @@
   <!-- Get Bonus section end -->
 
   <!-- Pay Bill form section start -->
-  <section class="max-w-md mx-auto bg-base-200 px-5 py-5">
+  <section id="pay-bill" class="max-w-md mx-auto bg-base-200 px-5 py-5 hidden">
     <div class="flex items-center justify-between">
       <h2 class="text-xl font-bold">Pay Bill</h2>
     </div>
@@ -337,7 +338,6 @@
   <script src="./js/transfer-money.js"></script>
   <script src="./js/get-bonus.js"></script>
   <script src="./js/pay-bill.js"></script>
-  <script src="./js/transaction-history.js"></script>
 </body>
 
 </html>

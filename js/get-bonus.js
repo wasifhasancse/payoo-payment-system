@@ -1,15 +1,19 @@
-const newYearBonus = "NY2024"; 
+const newYearBonus = "NY2024";
+const newYearBonusAmount = 10.0;
 
 document.getElementById("bonus-btn").addEventListener("click", function () {
   const bonusCoupon = document.getElementById("bonus-coupon-code").value;
 
-  if(bonusCoupon === newYearBonus) {
-    const modal = modalOpen("Congratulations! You have received a bonus of $10.00.");
+  if (bonusCoupon === newYearBonus) {
+    const modal = modalOpen(
+      `Congratulations! You have received a bonus of $${newYearBonusAmount.toFixed(2)}.`,
+    );
     setTimeout(() => {
       modal.close();
     }, 3000);
     let currentBalance = getBalance();
-    setBalance(currentBalance + 10.0);
+    setBalance(currentBalance + newYearBonusAmount);
+    addTransactionHistory("Bonus", "+", newYearBonusAmount);
     document.getElementById("bonus-coupon-code").value = "";
   } else {
     const modal = modalOpen("Invalid bonus coupon code.");
