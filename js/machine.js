@@ -67,5 +67,4 @@ function showCase(id) {
 
   const selectedSection = document.getElementById(id);
   selectedSection.classList.remove("hidden");
-
 }

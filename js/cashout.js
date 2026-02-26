@@ -27,6 +27,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     }, 3000);
     return;
   }
+  
   if (cashoutPin === userPin) {
     const newBalance = currentBalance - parseFloat(cashOutAmount);
     setBalance(newBalance);
